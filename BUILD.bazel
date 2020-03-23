@@ -1,0 +1,11 @@
+load("@rules_python//python:defs.bzl", "py_binary")
+load("@global_deps//:requirements.bzl", "requirement", "all_requirements")
+
+py_binary(
+	name="sync-pr",
+	main="sync_pr.py",
+	srcs=["sync_pr.py"],
+	deps=all_requirements,
+	python_version="PY3"
+)
+
